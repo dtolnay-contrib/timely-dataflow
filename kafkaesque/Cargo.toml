@@ -6,7 +6,7 @@ edition = "2018"
 
 [dependencies]
 abomonation="0.7"
-timely = { path = "../timely" }
+timely-master = { path = "../timely" }
 
 [dependencies.rdkafka]
 version = "0.23.0"

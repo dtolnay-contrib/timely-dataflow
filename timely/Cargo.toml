@@ -1,7 +1,7 @@
 [package]
 
-name = "timely"
-version = "0.12.0"
+name = "timely-master"
+version = "0.13.0-dev.1"
 authors = ["Frank McSherry <fmcsherry@me.com>"]
 readme = "../README.md"
 edition = "2018"
@@ -15,10 +15,13 @@ repository = "https://github.com/TimelyDataflow/timely-dataflow.git"
 keywords = ["timely", "dataflow"]
 license = "MIT"
 
+[lib]
+name = "timely"
+
 [features]
 default = ["getopts"]
-bincode= ["timely_communication/bincode"]
-getopts = ["getopts-dep", "timely_communication/getopts"]
+bincode= ["timely-communication-master/bincode"]
+getopts = ["getopts-dep", "timely-communication-master/getopts"]
 
 [dependencies]
 getopts-dep = { package = "getopts", version = "0.2.14", optional = true }
@@ -26,10 +29,10 @@ serde = "1.0"
 serde_derive = "1.0"
 abomonation = "0.7.3"
 abomonation_derive = "0.5"
-timely_bytes = { path = "../bytes", version = "0.12" }
-timely_logging = { path = "../logging", version = "0.12" }
-timely_communication = { path = "../communication", version = "0.12", default-features = false }
-timely_container = { path = "../container", version = "0.12" }
+timely-bytes-master = { path = "../bytes", version = "=0.13.0-dev.1" }
+timely-logging-master = { path = "../logging", version = "=0.13.0-dev.1" }
+timely-communication-master = { path = "../communication", version = "=0.13.0-dev.1", default-features = false }
+timely-container-master = { path = "../container", version = "=0.13.0-dev.1" }
 crossbeam-channel = "0.5.0"
 futures-util = "0.3"
 
